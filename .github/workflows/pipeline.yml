@@ -1,0 +1,25 @@
+name: Pipeline-ul meu CI
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-si-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Descarcă codul
+        uses: actions/checkout@v4
+
+      - name: Setează Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Instalează pytest
+        run: pip install pytest
+
+      - name: Rulează testele
+        run: pytest
