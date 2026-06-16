@@ -1,3 +1,3 @@
 from  salut import aduna  
 def test_aduna():
-asset aduna(2, 3) == 5
+assert aduna(2, 3) == 5
